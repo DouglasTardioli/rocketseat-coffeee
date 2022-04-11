@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgrond: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --border-menu-mobile: #a8a8b3;
+  --text-color-menu-mobile: #e1e1e6;
+}
+
+body,
+html,
+ul,
+a {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--backgrond);
+  color: var(--text-color);
+  text-decoration: none;
+  list-style-type: none;
+
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+}
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 50px 50px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  margin-left: 60px;
+}
+
+nav ul li a {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+nav ul li a:hover {
+  color: var(--button);
+}
+
+nav #logoRocketseatDesktop {
+  margin-left: 40px;
+}
+
+nav button {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+
+  width: 170px;
+  height: 35px;
+  border: 1px solid var(--button);
+  border-radius: 6px;
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+#great {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#great #greatCoffee {
+  font-weight: 700;
+  font-size: 80px;
+}
+
+#great #greatCode {
+  font-weight: 700;
+  font-size: 80px;
+  color: var(--backgrond);
+
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+#blur-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#blur-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#footerImg {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  width: 800px;
+  height: 507px;
+}
+
+#menu-buguer-close,
+#menu-buguer-open,
+#logoRocketseatMobile {
+  display: none;
+  visibility: hidden;
+}
+
+.responsive {
+  display: none;
+  visibility: hidden;
+}
+
+.middle {
+  display: none;
+  visibility: hidden;
+}
+@media (max-width: 850px) {
+  #menu-buguer-close,
+  #menu-buguer-open,
+  #logoRocketseatMobile {
+    display: flex;
+    visibility: visible;
+  }
+  header nav {
+    padding: 30px;
+  }
+  .middle {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    visibility: visible;
+  }
+  .middle button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+
+    width: 170px;
+    height: 35px;
+    border: 1px solid var(--button);
+    border-radius: 6px;
+    color: var(--text-color);
+    background-color: transparent;
+
+    margin-top: 80px;
+  }
+  .middle h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 10px;
+  }
+
+  #great {
+    margin-top: 20px;
+  }
+
+  #great #greatCode {
+    font-size: 60px;
+  }
+  #great #greatCoffee {
+    font-size: 60px;
+  }
+  .responsive nav {
+    padding: 0;
+    position: relative;
+    left: -100%;
+  }
+  .responsive nav ul {
+    height: 100vh;
+    width: 100%;
+    display: block;
+    margin: 0;
+    background-color: var(--backgrond);
+  }
+
+  .responsive nav li a {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-menu-mobile);
+
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 20px;
+  }
+
+  .responsive nav li a:hover {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color-menu-mobile);
+
+    border-left: 4px solid var(--button);
+  }
+
+  .responsive nav:first-child {
+    border-top: 1px solid var(--border-menu-mobile);
+  }
+
+
+#blurMobile{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+}
+
+  #footerImg {
+   position: relative;
+      
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+    width: 328px;
+    height: 273px;
+    z-index: 3;
+  }
+
+  nav #inicial,
+  #buttonHeader {
+    display: none;
+    visibility: hidden;
+  }
+  #blur,
+  #logoRocketseatDesktop {
+    display: none;
+    visibility: hidden;
+  }
+}
