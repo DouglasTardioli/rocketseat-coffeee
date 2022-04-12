@@ -36,7 +36,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 
-  padding: 50px 50px;
+  padding: 30px 90px;
 }
 
 nav ul {
@@ -114,79 +114,95 @@ nav button {
   height: 307px;
 }
 
-#menu-buguer-close,
-#menu-buguer-open,
-#logoRocketseatMobile {
-  display: none;
-  visibility: hidden;
-}
-
-.responsive {
-  display: none;
-  visibility: hidden;
-}
-
-.middle {
+.mobile,
+.responsive,
+.middle,
+.logoRocketseatMobile {
   display: none;
   visibility: hidden;
 }
 
 @media (max-width: 850px) {
   body {
-    overflow: scroll;
-    overflow-x: hidden;
   }
-
-  #menu-buguer-close,
-  #menu-buguer-open,
-  #logoRocketseatMobile {
-    display: flex;
+  .mobile {
+    display: block;
     visibility: visible;
   }
 
-  header nav {
-    padding: 30px;
-  }
-
-  .responsive nav {
-    padding: 0;
-    position: relative;
-    left: -100%;
-  }
-
-  .responsive nav.show ul {
-    height: 100vh;
-    width: 100%;
-    display: block;
-    margin: 0;
-    background-color: var(--backgrond);
-  }
-
-  .responsive nav li a {
+  .logoRocketseatMobile {
     display: flex;
-    flex-direction: column;
+    visibility: visible;
+    position: absolute;
+    top: -5%;
+    left: 8%;
+    width: 120px;
+    height: 70px;
+  }
+
+  .toggle {
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: block;
+    position: absolute;
+    top: 3.8rem;
+    left: -100%;
+
+    background-color: var(--backgrond);
+    height: 100vh;
+  }
+
+  nav.show ul li {
+    padding: 1rem;
+    width: 100vw;
     border-bottom: 1px solid var(--border-menu-mobile);
-
-    font-size: 18px;
-    font-weight: 400;
-    padding: 20px 20px;
   }
 
-  .responsive nav.show li a:hover {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-color-menu-mobile);
-
-    border-left: 4px solid var(--button);
-  }
-
-  .responsive nav:first-child {
+  nav.show ul li:nth-child(1) {
     border-top: 1px solid var(--border-menu-mobile);
   }
+  nav ul li a {
+    color: var(--text-color-menu-mobile);
+  }
 
-  .responsive nav.show ul {
+  nav.show ul li:hover {
+    font-weight: 700;
+    border-left: 3px solid var(--button);
+  }
+
+  .menu-buguer {
     position: absolute;
-    left: 0;
+    top: 37%;
+    right: 8%;
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+  }
+
+  .menu-buguer-close {
+    position: absolute;
+    top: 39%;
+    right: 8%;
+    width: 15px;
+    height: 15px;
+    visibility: hidden;
+  }
+
+  nav.show .menu-buguer {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  nav.show .menu-buguer-close {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav.show ul {
+    position: absolute;
+    left: -17%;
     z-index: 100;
     background: var(--backgrond);
 
@@ -194,15 +210,6 @@ nav button {
     height: 100vh;
 
     transition: 0.2s;
-  }
-  #logoRocketseatMobile {
-    width: 120px;
-    height: 70px;
-  }
-
-  #menu-buguer-open {
-    position: absolute;
-    right: 8%;
   }
 
   .middle {
@@ -242,7 +249,7 @@ nav button {
   }
 
   #great {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 
   #great #greatCode {
@@ -260,24 +267,17 @@ nav button {
 
   #footerImg {
     position: relative;
-    bottom: 0;
-    left: 0;
     display: flex;
     justify-content: center;
-    margin-top: 110px;
+    margin-top: 100px;
     width: 250px;
     height: 180px;
     z-index: 2;
   }
 
-  nav #inicial,
-  #buttonHeader {
-    display: none;
-    visibility: hidden;
-  }
-
-  #blur,
-  #logoRocketseatDesktop {
+  #logo,
+  #buttonHeader,
+  #blur {
     display: none;
     visibility: hidden;
   }

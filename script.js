@@ -1,5 +1,5 @@
-const nav = document.querySelector('.section nav')
-const toggle = document.getElementById('nav toggle')
+const nav = document.querySelector('#header nav')
+const toggle = document.querySelectorAll('nav .toggle')
 
 for (const element of toggle) {
   element.addEventListener('click', function () {
